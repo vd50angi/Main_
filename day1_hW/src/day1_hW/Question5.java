@@ -1,7 +1,11 @@
 package day1_hW;
 import java.util.Scanner;
-import java.text.DecimaFormat;
+import java.DecimalFormat;
+
 public class Question5 {
+	
+	private static Object df; 
+	
 	
 	public static void main(String[]args) {
 	Scanner tickets =  new Scanner(System.in);
@@ -24,30 +28,50 @@ public class Question5 {
 	//circle value is only K and Q other than it's invalid
 	
 	circle =tickets.next();
-	if(circle = "k") {
+	if(circle = "k" != null) {
 		total = numOfTickets * 75;
-	}  else if (circle = "q") {
+	}  else if (circle = "q" != null) {
 		total = numOfTickets * 150;
 	}else {
 		System.out.println("Invalid Input");
 		
 		if (numOfTickets > 20) {
 			bulkDiscount = (total * (0.1));
-			
-			else if ()
+			regDiscount = total - bulkDiscount; 
+			else if (coupon == "y") {
+				 bulkDiscount = ((0.2) * total);
+				 specialCoupdiscount = regDiscount - bulkDiscount;
+				 if(ticketType =="y") {
+					 refreshment = numOfTickets * 150;
+					 ticketCost = specialCoupDiscount + refreshment;
+					 
+				 } else {
+					 ticketCost = specialCoupDiscount;
+				 }
+			} else {
+				ticketCost = regDiscount;
+			}
+		} else {
+			ticketCost = totalAmount;
 		}
-		
-		
-	}
+		DecimalFormat DecimalFormat = new DecimalFormat("#.##");
+		System.out.println (" Total Ticket Cost:" + df.format(ticketCost));
+				 
+			}
+				
 	
-	
-	
-	
-	
-	
-	
-		
-	
-	}
+		//error need to resolved not done
 
-}
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+
+
